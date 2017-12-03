@@ -1,0 +1,153 @@
+html {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-image: url(images/darthvaderlg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    width: auto;
+    height: auto;
+}
+
+.intro-form {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    right: 10px;
+    background-color: floralwhite;
+}
+
+.game {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    right: 10px;
+
+}
+
+.questions {
+    list-style: none;
+    background-color: floralwhite;
+}
+
+.hide {
+    display: none;
+}
+
+.wrongAns {
+    display: none;
+}
+
+.rightAns {
+    display: none;
+}
+
+.rightAns.show {
+    display: block;
+}
+
+.wrongAns.show {
+    display: block;
+}
+
+img {
+    position: absolute;
+    z-index: 100;
+    margin-left: -174px;
+    margin-top: 115px;
+}
+
+.caption {
+    z-index: 100;
+    position: absolute;
+    margin-left: 48px;
+    margin-top: 420px;
+}
+
+button {
+    background-color: #0DFFE5;
+    display: block;
+    width: 75px;
+    height: 37px;
+}
+
+@media(min-width: 768px) {
+
+    img {
+        position: absolute;
+        margin-left: -190px;
+        margin-top: 150px;
+    }
+
+    .caption {
+        z-index: 100;
+        position: absolute;
+        margin-left: 208px;
+        margin-top: 455px;
+    }
+
+
+}
+
+@media(min-width: 992px) {
+    img {
+        position: absolute;
+        margin-left: -190px;
+        margin-top: 200px;
+    }
+
+    .caption {
+        z-index: 100;
+        position: absolute;
+        margin-left: 331px;
+        margin-top: 510px;
+    }
+
+    .intro-form {
+        position: absolute;
+        bottom: 15px;
+        left: 100px;
+        right: 100px;
+        background-color: floralwhite;
+    }
+
+    .game {
+        position: absolute;
+        bottom: 15px;
+        left: 250px;
+        right: 250px;
+
+    }
+}
+
+@media(min-width: 1292px) {
+    img {
+        position: absolute;
+        margin-left: -190px;
+        margin-top: 265px;
+    }
+    .caption {
+        z-index: 100;
+        position: absolute;
+        margin-left: 500px;
+        margin-top: 575px;
+    }
+
+}
