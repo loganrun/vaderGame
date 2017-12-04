@@ -151,3 +151,18 @@ button {
     }
 
 }
+
+@media(min-width: 2560px) {
+    img {
+        position: absolute;
+        margin-left: -190px;
+        margin-top: 1020px;
+    }
+    .caption {
+        z-index: 100;
+        position: absolute;
+        margin-left: 1100px;
+        margin-top: 1325px;
+    }
+
+}
