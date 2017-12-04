@@ -152,7 +152,7 @@ button {
 
 }
 
-@media(min-width: 2560px) {
+@media(min-width: 2500px) {
     img {
         position: absolute;
         margin-left: -190px;
