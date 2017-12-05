@@ -174,7 +174,6 @@ function checkAnswer(answer) {
 
 function handleQuizContinue() {
     $('.giff').on('click', '.continueQuiz', event => {
-        console.log("click");
         questionIndex++;
         if (questionIndex <= 9) {
             $('.rightAns').removeClass('show');
