@@ -61,25 +61,53 @@ h1 {
 
 .rightAns.show {
     display: block;
+    width: 350px;
+    height: 350px;
+    margin: 150px auto 0px;
+    position: relative
 }
 
 .wrongAns.show {
     display: block;
+    width: 350px;
+    height: 350px;
+    margin: 110px auto 0px;
+    position: relative
 }
 
-img {
-    position: absolute;
-    z-index: 100;
-    margin-left: -174px;
-    margin-top: 115px;
+/*.wrongAns h2 {*/
+
+/*    color: white;*/
+
+/*}*/
+
+.reveal {
+    background-color: floralwhite;
 }
 
-.caption {
-    z-index: 100;
-    position: absolute;
-    margin-left: 48px;
-    margin-top: 420px;
-}
+/*img {*/
+
+/*    position: absolute;*/
+
+/*    z-index: 100;*/
+
+/*    margin-left: -174px;*/
+
+/*    margin-top: 115px;*/
+
+/*}*/
+
+/*.caption {*/
+
+/*    z-index: 100;*/
+
+/*    position: absolute;*/
+
+/*    margin-left: 48px;*/
+
+/*    margin-top: 420px;*/
+
+/*}*/
 
 button {
     background-color: #0DFFE5;
@@ -88,96 +116,158 @@ button {
     height: 37px;
 }
 
-@media(min-width: 768px) {
+/*@media(min-width: 768px) {*/
 
-    img {
-        position: absolute;
-        margin-left: -190px;
-        margin-top: 150px;
-    }
+/*    img {*/
 
-    .caption {
-        z-index: 100;
-        position: absolute;
-        margin-left: 208px;
-        margin-top: 455px;
-    }
+/*        position: absolute;*/
 
+/*        margin-left: -190px;*/
 
-}
+/*        margin-top: 150px;*/
 
-@media(min-width: 992px) {
-    img {
-        position: absolute;
-        margin-left: -190px;
-        margin-top: 200px;
-    }
+/*    }*/
 
-    .caption {
-        z-index: 100;
-        position: absolute;
-        margin-left: 331px;
-        margin-top: 510px;
-    }
+/*    .caption {*/
 
-    .intro-form {
-        position: absolute;
-        bottom: 15px;
-        left: 100px;
-        right: 100px;
-        background-color: floralwhite;
-    }
+/*        z-index: 100;*/
 
-    .game {
-        position: absolute;
-        bottom: 15px;
-        left: 250px;
-        right: 250px;
+/*        position: absolute;*/
 
-    }
-}
+/*        margin-left: 208px;*/
 
-@media(min-width: 1292px) {
-    img {
-        position: absolute;
-        margin-left: -190px;
-        margin-top: 265px;
-    }
-    .caption {
-        z-index: 100;
-        position: absolute;
-        margin-left: 500px;
-        margin-top: 575px;
-    }
+/*        margin-top: 455px;*/
 
-}
+/*    }*/
 
-@media(min-width: 1440px) {
-    img {
-        position: absolute;
-        margin-left: -190px;
-        margin-top: 265px;
-    }
-    .caption {
-        z-index: 100;
-        position: absolute;
-        margin-left: 540px;
-        margin-top: 575px;
-    }
+/*}*/
 
-}
+/*@media(min-width: 992px) {*/
 
-@media(min-width: 2500px) {
-    img {
-        position: absolute;
-        margin-left: -190px;
-        margin-top: 1020px;
-    }
-    .caption {
-        z-index: 100;
-        position: absolute;
-        margin-left: 1100px;
-        margin-top: 1325px;
-    }
+/*    img {*/
 
-}
+/*        position: absolute;*/
+
+/*        margin-left: -190px;*/
+
+/*        margin-top: 200px;*/
+
+/*    }*/
+
+/*    .caption {*/
+
+/*        z-index: 100;*/
+
+/*        position: absolute;*/
+
+/*        margin-left: 331px;*/
+
+/*        margin-top: 510px;*/
+
+/*    }*/
+
+/*    .intro-form {*/
+
+/*        position: absolute;*/
+
+/*        bottom: 15px;*/
+
+/*        left: 100px;*/
+
+/*        right: 100px;*/
+
+/*        background-color: floralwhite;*/
+
+/*    }*/
+
+/*    .game {*/
+
+/*        position: absolute;*/
+
+/*        bottom: 15px;*/
+
+/*        left: 250px;*/
+
+/*        right: 250px;*/
+
+/*    }*/
+
+/*}*/
+
+/*@media(min-width: 1292px) {*/
+
+/*    img {*/
+
+/*        position: absolute;*/
+
+/*        margin-left: -190px;*/
+
+/*        margin-top: 265px;*/
+
+/*    }*/
+
+/*    .caption {*/
+
+/*        z-index: 100;*/
+
+/*        position: absolute;*/
+
+/*        margin-left: 500px;*/
+
+/*        margin-top: 575px;*/
+
+/*    }*/
+
+/*}*/
+
+/*@media(min-width: 1440px) {*/
+
+/*    img {*/
+
+/*        position: absolute;*/
+
+/*        margin-left: -190px;*/
+
+/*        margin-top: 265px;*/
+
+/*    }*/
+
+/*    .caption {*/
+
+/*        z-index: 100;*/
+
+/*        position: absolute;*/
+
+/*        margin-left: 540px;*/
+
+/*        margin-top: 575px;*/
+
+/*    }*/
+
+/*}*/
+
+/*@media(min-width: 2500px) {*/
+
+/*    img {*/
+
+/*        position: absolute;*/
+
+/*        margin-left: -190px;*/
+
+/*        margin-top: 1020px;*/
+
+/*    }*/
+
+/*    .caption {*/
+
+/*        z-index: 100;*/
+
+/*        position: absolute;*/
+
+/*        margin-left: 1100px;*/
+
+/*        margin-top: 1325px;*/
+
+/*    }*/
+
+/*}*/

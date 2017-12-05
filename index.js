@@ -8,7 +8,8 @@ const QUESTIONS = [{
             "Blue",
             "Purple"
         ],
-        ans: "D"
+        ans: "D",
+        reveal: "Purple"
     },
 
     {
@@ -19,7 +20,8 @@ const QUESTIONS = [{
             "Anakin Skywalker",
             "Wedge Antilles"
         ],
-        ans: "C"
+        ans: "C",
+        reveal: "Anakin Skywalker"
     },
 
     {
@@ -30,7 +32,8 @@ const QUESTIONS = [{
             "Sade",
             "Jen"
         ],
-        ans: "B"
+        ans: "B",
+        reveal: "Shmi"
     },
     {
         question: "4)   Why does Jar Jar suck?",
@@ -40,17 +43,19 @@ const QUESTIONS = [{
             "Useless Distraction",
             "All the Above"
         ],
-        ans: "D"
+        ans: "D",
+        reveal: "All the Above"
     },
     {
         question: "5)   What is the name of Han Solo's ship?",
         answers: [
             "The Enterprise",
             "Serenity",
-            "Millennium Falcon",
+            "The Millennium Falcon",
             "Endeavour"
         ],
-        ans: "C"
+        ans: "C",
+        reveal: "The Millennium Falcon"
     },
     {
         question: "6)   Who is Darth Maul's brother?",
@@ -60,7 +65,8 @@ const QUESTIONS = [{
             "Savage Opress",
             "Kycina"
         ],
-        ans: "C"
+        ans: "C",
+        reveal: "Savage Opress"
     },
     {
         question: "7)   What was the occupation of Luke's Aunt & Uncle",
@@ -68,9 +74,10 @@ const QUESTIONS = [{
             "Droid repair",
             "Moisture Farmers",
             "Nerd Herders",
-            "Bantha Ranchers"
+            "Bantha Ranchers",
         ],
-        ans: "B"
+        ans: "B",
+        reveal: "Moisture Farmers"
     },
     {
         question: "8)   How fast can the Millennium Falcon do the Kessel Run?",
@@ -80,7 +87,8 @@ const QUESTIONS = [{
             "Warp 4",
             "24 quantums"
         ],
-        ans: "A"
+        ans: "A",
+        reveal: "12 parsecs"
     },
     {
         question: "9)   Who or What is Dejarik?",
@@ -90,7 +98,8 @@ const QUESTIONS = [{
             "Bonthan spy",
             "Chess game"
         ],
-        ans: "D"
+        ans: "D",
+        reveal: "Chess game"
     },
     {
         question: "10)  What is the source of a lightsaber's power?",
@@ -100,7 +109,8 @@ const QUESTIONS = [{
             "Midichlorians Crystals",
             "The Force"
         ],
-        ans: "B"
+        ans: "B",
+        reveal: "Kyber Crystals"
     }
 ];
 
@@ -121,10 +131,15 @@ function renderQuizQuestions() {
     $('.questions').append(`
         <li>
             <h2>${currentQuestion[questionIndex].question}</h2>
-            <input type="radio" name="question0" class="checkedAnswer" value="A">${currentQuestion[questionIndex].answers[0]}<br>
-            <input type="radio" name="question0" class="checkedAnswer" value="B">${currentQuestion[questionIndex].answers[1]}<br>
-            <input type="radio" name="question0" class="checkedAnswer" value="C">${currentQuestion[questionIndex].answers[2]}<br>
-            <input type="radio" name="question0" class="checkedAnswer" value="D">${currentQuestion[questionIndex].answers[3]}<br>
+            <input type="radio" name="question0" id="choice1" class="checkedAnswer" value="A">
+            <label for = "choice1">${currentQuestion[questionIndex].answers[0]}</label><br>
+            <input type="radio" name="question0" id="choice2" class="checkedAnswer" value="B">
+            <label for = "choice2">${currentQuestion[questionIndex].answers[1]}</label><br>
+            <input type="radio" name="question0" id="choice3" class="checkedAnswer" value="C">
+            <label for = "choice3">${currentQuestion[questionIndex].answers[2]}</label><br>
+            <input type="radio" name="question0" id="choice4" class="checkedAnswer" value="D">
+            <label for = "choice4">${currentQuestion[questionIndex].answers[3]}</label><br>
+            
         </li>
         
         <button class = "answers"action = "submit"> Ans </button>
@@ -137,7 +152,6 @@ function handleQuizAnswer() {
     $('.game').submit(function(event) {
         event.preventDefault();
         let answer = $('input[name=question0]:checked').val();
-        console.log(answer);
         checkAnswer(answer);
     });
 }
@@ -145,6 +159,7 @@ function handleQuizAnswer() {
 function checkAnswer(answer) {
     let currentAnswer = answer;
     let correctAnswer = QUESTIONS[questionIndex].ans;
+    let revealAns = QUESTIONS[questionIndex].reveal;
     if (currentAnswer === correctAnswer) {
         $('.questions').empty();
         $('.rightAns').addClass('show');
@@ -153,15 +168,18 @@ function checkAnswer(answer) {
     else {
         $('.questions').empty();
         $('.wrongAns').addClass('show');
+        $('.wrongAns').append(`<div class="reveal"><h2> The Correct Answer is ${revealAns}!<h2/></div>`);
     }
 }
 
 function handleQuizContinue() {
-    $('.caption').on('click', '.continueQuiz', event => {
+    $('.giff').on('click', '.continueQuiz', event => {
+        console.log("click");
         questionIndex++;
         if (questionIndex <= 9) {
             $('.rightAns').removeClass('show');
             $('.wrongAns').removeClass('show');
+            $('.reveal').empty();
             renderQuizQuestions();
         }
         else {
