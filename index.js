@@ -178,7 +178,7 @@ function handleQuizContinue() {
         if (questionIndex <= 9) {
             $('.rightAns').removeClass('show');
             $('.wrongAns').removeClass('show');
-            $('.reveal').empty();
+            $('.reveal').remove();
             renderQuizQuestions();
         }
         else {
