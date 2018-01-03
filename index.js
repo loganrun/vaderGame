@@ -131,19 +131,19 @@ function renderQuizQuestions() {
     $('.questions').append(`
         <li>
             <h2>${currentQuestion[questionIndex].question}</h2>
-            <input type="radio" name="question0" id="choice1" class="checkedAnswer" value="A">
+            <input type="radio" group="ans" name="question0" id="choice1" class="checkedAnswer" value="A">
             <label for = "choice1">${currentQuestion[questionIndex].answers[0]}</label><br>
-            <input type="radio" name="question0" id="choice2" class="checkedAnswer" value="B">
+            <input type="radio" group="ans" name="question0" id="choice2" class="checkedAnswer" value="B">
             <label for = "choice2">${currentQuestion[questionIndex].answers[1]}</label><br>
-            <input type="radio" name="question0" id="choice3" class="checkedAnswer" value="C">
+            <input type="radio" group="ans" name="question0" id="choice3" class="checkedAnswer" value="C">
             <label for = "choice3">${currentQuestion[questionIndex].answers[2]}</label><br>
-            <input type="radio" name="question0" id="choice4" class="checkedAnswer" value="D">
+            <input type="radio" group="ans" name="question0" id="choice4" class="checkedAnswer" value="D">
             <label for = "choice4">${currentQuestion[questionIndex].answers[3]}</label><br>
 
         </li>
 
         <button class = "answers"action = "submit"> Ans </button>
-        <h3 role="presentation">You have answered ${score} out of 10 correctly<h3>
+        <h3>You have answered ${score} out of 10 correctly<h3>
 
     `);
 }
