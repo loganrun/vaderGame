@@ -139,12 +139,12 @@ function renderQuizQuestions() {
             <label for = "choice3">${currentQuestion[questionIndex].answers[2]}</label><br>
             <input type="radio" name="question0" id="choice4" class="checkedAnswer" value="D">
             <label for = "choice4">${currentQuestion[questionIndex].answers[3]}</label><br>
-            
+
         </li>
-        
+
         <button class = "answers"action = "submit"> Ans </button>
-        <h3>You have answered ${score} out of 10 correctly<h3>
-        
+        <h3 role="presentation">You have answered ${score} out of 10 correctly<h3>
+
     `);
 }
 
